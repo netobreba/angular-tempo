@@ -1,0 +1,11 @@
+<ng-container *ngIf="predicted">
+    <h2 style="margin-bottom: 0px">{{predicted?.name}}</h2>
+    <h4 style="margin-top:10px; margin-bottom: -3px" *ngIf="predicted">{{ 'now' | translate }}: {{predicted?.main.temp}}
+        °C</h4>
+    <div class="row" style="margin-left: 0px">
+        <h4 style="margin-top:10px" *ngIf="predicted">Max: {{predicted?.main.temp_max}} °C</h4>
+        <h4 style="margin-top:10px; margin-left: 35px" *ngIf="predicted">Min: {{predicted?.main.temp_min}} °C</h4>
+    </div>
+</ng-container>
+
+<h3 *ngIf="!predicted">{{'empty-result' | translate}}</h3>

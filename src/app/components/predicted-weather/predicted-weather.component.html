@@ -1,0 +1,27 @@
+
+<div class="row container-card">
+    <div class="col-md-10 offset-md-1">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title>{{ 'predicted-weather' | translate }}</mat-card-title>
+                <app-select-language></app-select-language>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+
+            <mat-card-content>
+                <div class="row" style="margin-top:40px">
+                    <div class="col-md-4">
+                        <mat-form-field class="adjust-margin-left-card">
+                            <input matInput appDebounceValue placeholder="{{ 'city' | translate}}" autocomplete="off" (val)="onChangeValue($event)">
+                        </mat-form-field>
+                    </div>
+
+                    <div class="col-md-8">
+                        <app-weather-show [predicted]="predicted"></app-weather-show>
+                    </div>
+                </div>
+            </mat-card-content>
+
+        </mat-card>
+    </div>
+</div>

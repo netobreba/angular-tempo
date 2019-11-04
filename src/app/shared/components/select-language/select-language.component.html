@@ -1,0 +1,5 @@
+<button mat-button [matMenuTriggerFor]="menu" style="position: absolute; right: 0px">{{currentLanguage | translate}}</button>
+<mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="changeLanguage('pt')">{{'pt' | translate }}</button>
+    <button mat-menu-item (click)="changeLanguage('en')">{{'en' | translate }}</button>
+</mat-menu>
